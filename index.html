@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="modernizr.custom.05819.js"></script>
+        <title>Crypto Currency</title>
+    </head>    
+    <!-- Navigation -->        
+    <body style="background-color: azure;">
+        <nav class="main-nav"> 
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <h1>The World of Crypto</h1>
+        <hr/>
+        <p>
+            Crypto is a great investment in 2022. This are some of the major Crypto Projects in the world of Crypto.
+        </p>
+        <img width="1280" height="640" src="crypto_currency.png" alt="Photograph of Crypto Currency"/> <br>
+     
+        <article>
+            <h2>Calculator</h2>
+            <input type="text" id="num1"/> <br/><br/>
+              <input type="text" id="num2"/> <br/><br/>
+              <select id="operators">
+                  <option value="+"> + </option>
+                  <option value="-"> - </option>
+                  <option value="/"> / </option>
+                  <option value="X"> x </option>
+              </select>
+              
+              <button onclick="calc();"> = </button>
+              <input type="text" id="result"/>
+              <script> 
+                function calc()
+                {
+                    var num1 = parseFloat(document.getElementById('num1').value);
+                    var num2 = parseFloat(document.getElementById('num2').value);
+                    
+                    var oper = document.getElementById('operators').value;
+                    
+                    if(oper === '+')
+                    {
+                        document.getElementById('result').value = num1 + num2;
+                    }
+                    
+                    if(oper === '-')
+                    {
+                        document.getElementById('result').value = num1 - num2;
+                    }
+                    
+                    if(oper === '/')
+                    {
+                        document.getElementById('result').value = num1 / num2;
+                    }
+                    
+                    if(oper === 'X')
+                    {
+                        document.getElementById('result').value = num1 * num2;
+                    }
+                }
+            </script>
+        </article>
+    </body>  
+
+</html>
