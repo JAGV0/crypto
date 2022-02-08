@@ -18,14 +18,55 @@
             </ul>
         </nav>
         
-        <h1>Contact</h1>
+        <h1>Contact Us</h1>
         <hr/>
-        <p>
-            Crypto is a great investment in 2022. This are some of the major Crypto Projects in the world of Crypto.
-        </p>
-        <img width="1280" height="640" src="crypto_currency.png" alt="Photograph of Crypto Currency"/> <br>
-     
-      
-    </body>  
+    <article>
+        <h2>Contact Form</h2>
+        <!-- form starts here -->    
+        <form id = "formOne">
+            Name: 
+            <input type="text" id="name" value = "">
+            <br/>
+            Message: 
+            <input type="text" id="message" value = "">
+            <br><br>
+            <input type="submit" id = "submit" onclick="chk(); return false">
+        </form>
+            <p id="result">  </p>
+    </article>
+    
+    <script>
+        function chk() 
+        {
+            var name = document.getElementById('formOne').name.value;
+            var message = document.getElementById('formOne').message.value;
+            document.getElementById('result').innerHTML = name + "\'s message is: " + message;
 
+            //exception handling is shown here 
+            try 
+            {
+                var userName = document.getElementById('formOne').name.value;
+                var userMessage = document.getElementById('formOne').message.value;
+                
+                if(userName === "") 
+                    {
+                        throw "Please enter a name";
+                    }
+                if(userMessage === "") 
+                    {
+                        throw "Please enter a message";
+                    }
+            }
+            catch (nameError)
+                {
+                    window.alert(nameError);  
+                }
+            finally 
+                {
+                    nameValue = true;
+                }
+        }
+    </script> 
+    </body> 
+    
 </html>
