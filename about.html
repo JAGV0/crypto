@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="modernizr.custom.05819.js"></script>
+        <title>Crypto Currency</title>
+    </head>    
+    <!-- Navigation -->        
+    <body style="background-color: azure;">
+        <nav class="main-nav"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <h1>About</h1>
+        <hr/>
+        <p>
+        Cryptocurrency is a digital payment system that doesn't rely on banks to verify transactions. 
+        It’s a peer-to-peer system that can enable anyone anywhere to send and receive payments. 
+        Instead of being physical money carried around and exchanged in the real world, 
+        cryptocurrency payments exist purely as digital entries to an online database describing specific transactions. 
+        When you transfer cryptocurrency funds, the transactions are recorded in a public ledger. 
+        Cryptocurrency is stored in digital wallets. Cryptocurrency received its name because it uses encryption to verify transactions. 
+        This means advanced coding is involved in storing and transmitting cryptocurrency data between wallets and to public ledgers. 
+        The aim of encryption is to provide security and safety.  
+        </p>
+        <br>
+        <h2>Learn more about the top  3 cryptocurrencies</h2>
+        <p>Type bitcoin, ethereum, or cardano in the box below to learn more about each cryptocurrency. (lowercase only) </p>
+
+        <input id="input" type="text" /><button onclick="btn()">Enter</button>
+        <p id="message"></p>
+       
+       <script>
+       function btn() 
+       {
+           var text;
+           var crypto = input.value;
+           switch (crypto)
+           {
+               case "bitcoin":
+                   text = "Bitcoin is a decentralized digital currency created in January 2009. It follows the ideas set out in a white paper by the mysterious and pseudonymous Satoshi Nakamoto. The identity of the person or persons who created the technology is still a mystery. Bitcoin offers the promise of lower transaction fees than traditional online payment mechanisms do, and unlike government-issued currencies, it is operated by a decentralized authority.";
+                   break;
+                case "ethereum":
+                    text = "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether is the native token of the platform. Ethereum was conceived in 2013 by programmer Vitalik Buterin. Additional founders of Ethereum included Gavin Wood, Charles Hoskinson, Anthony Di Iorio and Joseph Lubin. In 2014, development work commenced and was crowdfunded, and the network went live on 30 July 2015. The platform allows anyone to deploy permanent and immutable decentralized applications onto it, with which users can interact. Decentralized finance (DeFi) applications provide a broad array of financial services without the need for typical financial intermediaries like brokerages, exchanges, or banks, such as allowing cryptocurrency users to borrow against their holdings or lend them out for interest. Ethereum also allows for the creation and exchange of NFTs, which are non-fungible tokens connected to digital works of art or other real-world items and sold as unique digital property.";
+                    break;
+                case "cardano":
+                    text = "Cardano is a third-generation, decentralized proof-of-stake (PoS) blockchain platform designed to be a more efficient alternative to proof-of-work (PoW) networks. Scalability, interoperability, and sustainability on PoW networks like Ethereum are limited by the infrastructure burden of growing costs, energy use, and slow transaction times. Charles Hoskinson, the co-founder of the proof-of-work (PoW) blockchain Ethereum, understood the implications of these challenges to blockchain networks, and began developing Cardano and its primary cryptocurrency, ada, in 2015, launching the platform and the ada token in 2017.";
+                    break;
+                default:
+                   text = "Sorry. I don't recognize this cryptocurrency...";
+            }
+       document.getElementById("message").innerHTML = text;
+       }
+       </script>
+     
+      
+    </body>  
+
+</html>
