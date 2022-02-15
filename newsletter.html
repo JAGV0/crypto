@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="modernizr.custom.05819.js"></script>
+        <title>Crypto Currency</title>
+    </head>    
+    <!-- Navigation -->        
+    <body style="background-color: azure;">
+        <nav class="main-nav"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="current"><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <article>
+            <h1>Newsletter</h1>
+            <h4>Sign Up</h4>
+            <form id="form" method="post">
+                <div id="message"></div>
+                <input type="text" id="email" placeholder="Email" required="required"><br>
+                <input type="user" id="username" placeholder="Username" required="required"><br>
+                <input type="password" id="password" placeholder="Password" required="required"><br>
+                <input type="submit" value="Register"><br>
+            </form>
+        </article>
+        <script>
+            var form = document.getElementById("form")
+            var error = []
+            
+            form.addEventListener("submit", function(e){
+                e.preventDefault() 
+                var email = document.getElementById("email")
+                var username = document.getElementById("username")
+                var password = document.getElementById("password")
+
+                if(email.value == ""){
+                    error.push("Please enter Email")
+                }
+                if(username.value == ""){
+                    error.push("Please enter Username")
+                }
+                if(password.value == ""){
+                    error.push("Please enter Password")
+                }
+                alert ("Form submitted successfully")
+                var message = document.getElementById("message")
+                message.innerText = error
+            })
+        </script>
+    </body>  
+
+</html>
