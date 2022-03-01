@@ -19,55 +19,33 @@
             </ul>
         </nav>
         
-        <h1>Contact Us</h1>
         <hr/>
-    <article>
-        <h2>Contact Form</h2>
         <!-- form starts here -->    
-        <form id = "formOne">
-            Name: 
-            <input type="text" id="name" value = "">
-            <br/>
-            Message: 
-            <input type="text" id="message" value = "">
-            <br><br>
-            <input type="submit" id = "submit" onclick="chk(); return false">
-        </form>
-            <p id="result">  </p>
-    </article>
-    
-    <script>
-        function chk() 
-        {
-            var name = document.getElementById('formOne').name.value;
-            var message = document.getElementById('formOne').message.value;
-            document.getElementById('result').innerHTML = name + "\'s message is: " + message;
+        <h2>To Do List</h2>
+        <p>Enter item name below and click add button.<br> To scratch off click the item name.<br> To delete double click item name. </p>
+         <div>
+         <input id="inputField" type="text"><button id="addToDo">Add</button>
+         <div class="to-dos" id="toDoContainer">
+         </div>
+         </div>
+         <script>
+            let addToDoButton = document.getElementById('addToDo');
+            let toDoContainer = document.getElementById('toDoContainer');
+            let inputField = document.getElementById('inputField');
 
-            //exception handling is shown here 
-            try 
-            {
-                var userName = document.getElementById('formOne').name.value;
-                var userMessage = document.getElementById('formOne').message.value;
-                
-                if(userName === "") 
-                    {
-                        throw "Please enter a name";
-                    }
-                if(userMessage === "") 
-                    {
-                        throw "Please enter a message";
-                    }
-            }
-            catch (nameError)
-                {
-                    window.alert(nameError);  
-                }
-            finally 
-                {
-                    nameValue = true;
-                }
-        }
-    </script> 
-    </body> 
-    
+            addToDoButton.addEventListener('click', function(){
+               var paragraph = document.createElement('p');
+               paragraph.classList.add('paragraph-styling');
+               paragraph.innerText = inputField.value;
+               toDoContainer.appendChild(paragraph);
+               inputField.value = "";
+               paragraph.addEventListener('click', function(){
+                  paragraph.style.textDecoration = "line-through";
+               })
+               paragraph.addEventListener('dblclick', function(){
+                  toDoContainer.removeChild(paragraph);
+               })
+            })
+         </script> 
+   </body>
 </html>
